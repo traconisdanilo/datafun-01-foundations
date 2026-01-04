@@ -1,0 +1,65 @@
+schema = "se-manifest-1"
+
+[repo]
+name = "datafun-01-foundations"
+org = "denisecase"
+kind = "software"
+status = "academic"
+since = "2026"
+summary = "Data Analytics Fundamentals Project 01."
+
+[layer]
+space = "Data Analytics"
+role = "post-secondary-education"
+
+[depends]
+required = []
+optional = []
+
+[provides]
+artifacts = [
+    "ANNOTATIONS.md",
+    "CITATION.cff",
+    "INSTRUCTORS.md",
+    "LICENSE",
+    "README.md",
+    "SE_MANIFEST.toml",
+]
+
+[scope]
+includes = [
+    "basic Git workflows (clone, commit, push, pull)",
+    "Python module creation and execution",
+    "use of standard Python main() execution pattern",
+    "local Python virtual environment usage (.venv)",
+    "dependency management via pyproject.toml and uv",
+    "use of external packages for logging and diagnostics",
+    "basic variables and functions in Python",
+    "professional IDE-based development workflows",
+]
+excludes = [
+    "advanced data analysis techniques",
+    "machine learning or statistical modeling",
+    "domain-specific datasets",
+    "production deployment systems",
+]
+
+[citation]
+cff = "CITATION.cff"
+preferred = "repo"
+bib_hint = "case2026-datafun-01-foundations"
+
+[traceability]
+identifier_map = "none"
+
+[meta]
+keywords = [
+    "education",
+    "python syntax",
+    "python packaging",
+    "project templates",
+    "professional python",
+    "data analytics fundamentals",
+    "uv",
+    "project templates",
+]
