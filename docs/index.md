@@ -1,6 +1,6 @@
-# DataFun 01 - Core Python Concepts
+# Data Analytics Fundamentals
 
-> Get started with professional Python.
+> Professional Python for Data Analytics
 
 This project comes with professional documentation.
 
@@ -10,8 +10,10 @@ This is where we present our analytics work.
 
 ---
 
-To customize, modify:
+## Customize this documentation site
 
-- `docs/` (folder with Markdown files)
-- `mkdocs.yaml` (in the root project folder)
-  - scroll to the end for the `nav` section
+To customize, edit:
+
+- `docs/` (Markdown pages)
+- `mkdocs.yaml` (in the repo root)
+  - scroll to the bottom for the `nav:` section

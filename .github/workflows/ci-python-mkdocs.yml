@@ -1,8 +1,17 @@
-# .github/workflows/ci.yml
-name: CI
+# ============================================================
+# .github/workflows/ci-python-mkdocs.yml (Continuous Integration)
+# ============================================================
+# SOURCE: https://github.com/denisecase/templates
+#
+# WHY-FILE: Validate repository hygiene, python, and documentation builds.
+# REQ: Any check that can be run locally MUST be available locally via pre-commit.
+# REQ: CI MUST NOT introduce arbitrary rules that are not reproducible locally.
+# OBS: CI validates only; it never edits files or deploys docs.
 
-# WHY: Validate repo contents on pushes to main branch and pull requests.
-# OBS: This workflow validates only; it never edits or deploys.
+name: CI (Python + MkDocs)
+
+# WHY: Validate code, docs, and repo metadata on PRs and pushes.
+# OBS: This workflow validates only; it never deploys.
 
 on:
   push:
@@ -20,36 +29,52 @@ env:
 
 jobs:
   ci:
+    name: Repository / Python checks and MkDocs build
     runs-on: ubuntu-latest # WHY: Linux environment matches most production deployments
-    timeout-minutes: 10 # WHY: Prevent hanging jobs. If over 30 mins, likely stuck.
+    timeout-minutes: 30 # WHY: Prevent hanging jobs. If over time, it is likely stuck.
 
     steps:
       # ============================================================
       # ASSEMBLE: Get code and set up environment
       # ============================================================
 
-      - name: A1) Checkout this repository
+      - name: A1) Checkout repository code
+        # WHY: Needed to access files for checks.
         uses: actions/checkout@v6
 
-      - name: A2) Install uv (with caching)
+      - name: A2) Run pre-commit (all files)
+        # WHY: Single source of truth for locally runnable quality gates.
+        # OBS: Fails if hooks would modify files; does not commit changes.
+        id: precommit # WHY: Identify step for conditional follow-up.
+        uses: pre-commit/action@v3.0.1
+        with:
+          extra_args: --all-files
+
+      - name: A2f) If pre-commit failed, run it locally
+        if: failure()
+        run: |
+          echo "## Pre-commit failed" >> "$GITHUB_STEP_SUMMARY"
+          echo "Please run pre-commit locally and commit the resulting changes." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: A3) Install uv (with caching)
         uses: astral-sh/setup-uv@v7
         with:
           enable-cache: true # WHY: Speed up installs on subsequent runs
           cache-dependency-glob: "uv.lock" # WHY: Only re-cache when dependencies change
 
-      - name: A3) Install Python 3.12 
+      - name: A4) Install Python 3.12
         run: uv python install 3.12
 
-      - name: A4) Show tool versions
+      - name: A5) Show tool versions
         run: |
           python --version
           uv --version
 
-      - name: A5) Sync to install all dependencies
+      - name: A6) Sync to install all dependencies
         run: uv sync --extra dev --extra docs --upgrade
 
       # ============================================================
-      # === BASELINE CHECKS: Validate code quality ===
+      # === BASELINE CHECKS ===
       # ============================================================
 
       - name: B1) validate-pyproject (must be in pyproject.toml deps)
@@ -102,6 +127,7 @@ jobs:
       # ============================================================
 
       - name: D1) Build docs (mkdocs --strict)
+        id: build-docs
         run: |
           if [ -f "mkdocs.yml" ] || [ -f "mkdocs.yaml" ]; then
             uv run mkdocs build --strict --verbose

@@ -1,10 +1,12 @@
-# RUFF STRICT CONFIG (ruff.strict.toml)
+# ============================================================
+# ruff.strict.toml (Stricter Ruff linter configuration)
+# ============================================================
 #
 # This file is OPTIONAL and stricter than pyproject.toml.
 # It extends pyproject.toml [tool.ruff] configuration with additional rules.
 #
 # USES:
-#   - instructors/maintainers before publishing template updates
+#   - maintainers before publishing template updates
 #   - those who want a higher bar
 #
 # NOTES:
@@ -16,8 +18,10 @@
 #   uv run ruff check --config ruff.strict.toml .
 #   uv run ruff check --config ruff.strict.toml --fix .
 #
-# ALSO RECOMMENDED for maintainers:
+# ALSO RECOMMENDED for maintainers, run:
 #   uv run pyright
+#   uv run bandit -c pyproject.toml -r src
+#   uv run validate-pyproject pyproject.toml
 
 [format]
 # WHY: Enforce consistent quote style to minimize diffs.
