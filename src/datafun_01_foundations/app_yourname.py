@@ -1,89 +1,76 @@
 """app_yourname.py - Project script.
 
-TODO: Replace "yourname" in the name of this file with your name or alias.
-TODO: Update the associated command to run your file in the README.md file.
-
-TODO: Update this module docstring with your name or alias and the date below.
-
 Author: Your Name or Alias
 Date: 2026-01
 
-  Practice key Python skills:
-  - docstring comments (triple quotes) used at the start of each module and function
-  - inline comments (these start with the hash symbol #)
-  - declaring variables (common kinds)
-  - using type hints (to make types explicit)
-  - declaring lists (widely used collections)
-  - using f-strings (formatted string literals to combine text and variables)
-  - logging (preferred over print - creates an external record of program runs)
-  - declaring common functions like main()
-  - using the standard Python entry point pattern (if __name__ == "__main__":)
-  - that way, we can run this file as a script OR import it as a module into other code files
+  Practice key Python skills related to:
+    - imports
+    - logging
+    - variables
+    - type hints
+    - global constants
+    - f-strings
+    - functions
+    - main function
+    - conditional execution guard
 
 OBS:
   This is your file to practice and customize.
   Find the TODO comments, and as you complete each task, remove the TODO note.
+
+TODO: Change the Author line of the docstring above to your name or alias.
+
+TODO: RENAME this file from app_yourname.py to something
+      that includes your name or alias, e.g., app_stellar_analytics.py.
+
+TODO: Update the opening line of the docstring above to match the new file name.
+
+TODO: Update the associated `uv run python` command in the README.md file.
+
 """
 
 
 # === DECLARE IMPORTS (BRING IN FREE CODE) ===
 
-# Python standard library
-import logging  # only needed so we can type hint the logger variable
-from typing import Final  # only needed for type hinting constants
+import logging
+import statistics
+from typing import Final
 
-# External (must be listed in pyproject.toml)
-# logging helps track program execution and is preferred over print statements
-# We'll use a pre-configured logger that respects privacy.
-from datafun_toolkit.logger import (
-    get_logger,
-    log_header,
-)
+from datafun_toolkit.logger import get_logger, log_header
 
 # === CONFIGURE LOGGER ONCE PER MODULE (PYTHON FILE) ===
 
-# Call the get_logger() function, pass in a phrase and the logging level we want.
-# The phrase helps identify the source of log messages.
-# The level could be "DEBUG", "INFO", "WARNING", "ERROR", or "CRITICAL".
-# Use DEBUG for development, INFO for production.
 LOG: logging.Logger = get_logger("P01", level="INFO")
+
 
 # === DECLARE GLOBAL CONSTANTS ===
 
-# All of these global variables are CONSTANT and do NOT change when the program runs.
-# By convention, constant variable names are all UPPERCASE_WITH_UNDERSCORES.
-# Declare a variable and initialize it with a value for each of these common types:
+# All these global variables are CONSTANT, they do NOT change when the program runs.
+# By convention, constants are named in UPPERCASE_WITH_UNDERSCORES.
+# The following illustrates variables that hold these common types:
 #    str, int, float, bool, list of strings.
-# Code like a pro: Use optional Python `type hints` to make types explicit
-# Just add a colon and the type before the equals sign.
-
-# See the example file for reference.
-# Then, declare your own variables as per the TODOs below.
+# `Final` is added to indicate these variables should not be reassigned.
 # Examples:
 
 MY_ANALYTICS_COMPANY: Final[str] = "DataFun Analytics"
 MY_EMPLOYEE_COUNT: Final[int] = 150
 
-# OPTION: To be super-explicit (and super professional),
-# use `Final` from the `typing` module for all constants.
-
-# RECOMMENDED: See the other file for examples.
-
-# TODO: Declare and initialize a string (str) variable of your choice.
+# See the other file for examples.
+# TODO: Declare and initialize a string (str) variable of your choice below:
 
 
-# TODO: Declare and initialize an integer (int) variable of your choice.
+# TODO: Declare and initialize an integer (int) variable of your choice below:
 
 
-# TODO: Declare and initialize a float (float) variable of your choice.
+# TODO: Declare and initialize a float (float) variable of your choice below:
 
 
-# TODO: Declare and initialize a boolean (bool) variable of your choice (True or False).
+# TODO: Declare and initialize a boolean (bool) variable of your choice (True or False) below:
 
 
-# TODO: Declare and initialize a list of strings (list[str]) variable of your choice.
-# Remember that strings must be in quotes, items are separated by commas,
-# and the whole list is wrapped in square brackets. (See the other file for examples.)
+# TODO: Declare and initialize a list of strings (list[str]) variable of your choice below:
+# REQ: Strings must be in quotes and items are separated by commas,
+# REQ: The list is wrapped in square brackets. (See the other file for examples.)
 
 
 # === DECLARE A FUNCTION TO FORMAT THE INFORMATION ===
@@ -100,11 +87,65 @@ def get_summary() -> str:
     # all of the global variables you declared above, each on its own line,
     # labeled clearly with descriptive text.
     # See the other file for an example. Remember to start the string with an f!
-    summary: str = """
+    summary: str = f"""
+    Custom Information:
+        Company name: {MY_ANALYTICS_COMPANY}
+        Employee count: {MY_EMPLOYEE_COUNT}
+        TODO: Add your other global variables below:
 
-    TODO: Don't forget to add an f at the start of this string to make it an f-string!
-    Your Summary will be about half the size because you can choose
-    to declare variables either WITH or WITHOUT Final, as you prefer.
+
+
+
+
+    """
+
+    LOG.info("Generated formatted multi-line SUMMARY string.")
+    LOG.info("Returning the str to the calling function.")
+    return summary
+
+
+# === DECLARE A FUNCTION TO FORMAT DESCRIPTIVE STATISTICS ===
+
+
+def get_statistics() -> str:
+    """Get a formatted summary showing descriptive statistics.
+
+    Arguments: None (nothing is passed in the parentheses).
+
+    Returns: - a formatted multi-line string.
+    """
+    # Initialize sample data - snowfall measurements in inches.
+    # REQ: Vary ONE of the sample data values.
+    # See how the statistics change when you do.
+    # TODO: Change one of the values in the list below.
+    snowfall_inches: list[float] = [2.5, 3.5, 4.5, 5.5, 6.5]
+
+    # Calculate descriptive statistics below - see other file for examples.
+
+    # Example: Calculate total snowfall.
+    total: float = sum(snowfall_inches)
+
+    # Example : Calculate count of measurements.
+    count: int = len(snowfall_inches)
+
+    # TODO: Calculate minimum and maximum snowfall (see other file for examples).
+
+    # Use the statistics module to calculate average.
+    average: float = statistics.mean(snowfall_inches) if count > 0 else 0.0
+
+    # TODO: Use the statistics module to calculate standard deviation below:
+
+    # Build a formatted multi-line string using f and triple quotes.
+    summary: str = f"""
+    Descriptive Statistics for Snowfall (inches):
+        Total snowfall: {total:.2f} inches
+        TODO: Add your count of measurements below:
+
+        TODO: Add your minimum and maximum snowfall below:
+
+        Average snowfall: {average:.2f} inches
+        TODO: Add your standard deviation below:
+
     """
 
     LOG.info("Generated formatted multi-line SUMMARY string.")
@@ -118,35 +159,33 @@ def get_summary() -> str:
 def main() -> None:
     """Entry point when running this file as a Python script.
 
-    Arguments: None (nothing is passed in the parentheses after the `main`).
+    Arguments: None.
 
-    Returns: None (nothing is returned when this function runs).
-
-    This function creates what we call `side effects` -
-    it just logs output to the console and a file.
-
-    Use the LOG variable to call info() methods to log messages.
-    Call the log_header() function once to log some key details that can help with debugging.
-    Call the get_summary() function to get the formatted summary string,
-    Log the summary string we get back from get_summary().
+    Returns: None.
     """
+    # Log a header for the application.
     LOG.info("=================")
     log_header(LOG, "Foundations of Professional Python")
     LOG.info("=================")
 
-    LOG.info("START main()")
+    # Log start of main processing.
+    LOG.info("START main()..................")
 
+    # Call functions to get formatted strings and log them.
     summary: str = get_summary()
     LOG.info(summary)
 
-    LOG.info("END main()")
+    stats: str = get_statistics()
+    LOG.info(stats)
+
+    # Log end of main processing.
+    LOG.info("END main()..................")
 
 
 # === CONDITIONAL EXECUTION GUARD ===
 
 # WHY: If running this file as a script, then call main() function.
 # OBS: This is just standard Python boilerplate.
-# OBS: We copy and paste it and do not bother to memorize it.
 
 if __name__ == "__main__":
     main()

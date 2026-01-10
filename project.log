@@ -98,3 +98,178 @@
 2026-01-07 07:50:49 | INFO | P01 | Returning the str to the calling function.
 2026-01-07 23:51:19 | INFO | P01 | Generated formatted multi-line SUMMARY string.
 2026-01-07 23:51:19 | INFO | P01 | Returning the str to the calling function.
+2026-01-10 06:35:07 | INFO | P01 | =================
+2026-01-10 06:35:07 | INFO | P01 | === RUN START ===
+2026-01-10 06:35:07 | INFO | P01 | project=Foundations of Professional Python
+2026-01-10 06:35:07 | INFO | P01 | repo_dir=datafun-01-foundations
+2026-01-10 06:35:07 | INFO | P01 | python=3.12.4
+2026-01-10 06:35:07 | INFO | P01 | os=Windows 11
+2026-01-10 06:35:07 | INFO | P01 | shell=powershell
+2026-01-10 06:35:07 | INFO | P01 | cwd=.
+2026-01-10 06:35:07 | INFO | P01 | github_actions=False
+2026-01-10 06:35:07 | INFO | P01 | =================
+2026-01-10 06:35:07 | INFO | P01 | START main()
+2026-01-10 06:35:07 | INFO | P01 | Generated formatted multi-line SUMMARY string.
+2026-01-10 06:35:07 | INFO | P01 | Returning the str to the calling function.
+2026-01-10 06:35:07 | INFO | P01 | 
+    Course Information:
+        Course name: Data Analytics Fundamentals
+        Course number: 608
+        Course hrs/wk: 20.00
+        Assumes prior experience: False
+        Helpful traits: ['patience', 'curiosity', 'humor', 'tenacity']
+
+    Project Information:
+        Project name: Project 01
+        Project number: 1
+        Project hrs/wk: 8.00
+        Uses professional Python: True
+        Required skills: ['variables', 'lists', 'f-strings', 'logging']
+    
+2026-01-10 06:35:07 | INFO | P01 | END main()
+2026-01-10 06:54:06 | INFO | P01 | =================
+2026-01-10 06:54:06 | INFO | P01 | === RUN START ===
+2026-01-10 06:54:06 | INFO | P01 | project=Foundations of Professional Python
+2026-01-10 06:54:06 | INFO | P01 | repo_dir=datafun-01-foundations
+2026-01-10 06:54:06 | INFO | P01 | python=3.12.4
+2026-01-10 06:54:06 | INFO | P01 | os=Windows 11
+2026-01-10 06:54:06 | INFO | P01 | shell=powershell
+2026-01-10 06:54:06 | INFO | P01 | cwd=.
+2026-01-10 06:54:06 | INFO | P01 | github_actions=False
+2026-01-10 06:54:06 | INFO | P01 | =================
+2026-01-10 06:54:06 | INFO | P01 | START main()
+2026-01-10 06:54:06 | INFO | P01 | Generated formatted multi-line SUMMARY string.
+2026-01-10 06:54:06 | INFO | P01 | Returning the str to the calling function.
+2026-01-10 06:54:06 | INFO | P01 | 
+    Course Information:
+        Course name: Data Analytics Fundamentals
+        Course number: 608
+        Course hrs/wk: 20.00
+        Assumes prior experience: False
+        Helpful traits: ['patience', 'curiosity', 'humor', 'tenacity']
+
+    Project Information:
+        Project name: Project 01
+        Project number: 1
+        Project hrs/wk: 8.00
+        Uses professional Python: True
+        Required skills: ['variables', 'lists', 'f-strings', 'logging']
+    
+2026-01-10 06:54:06 | INFO | P01 | Generated formatted multi-line SUMMARY string.
+2026-01-10 06:54:06 | INFO | P01 | Returning the str to the calling function.
+2026-01-10 06:54:06 | INFO | P01 | 
+    Descriptive Statistics for Snowfall (inches):
+        Total snowfall: 22.50 inches
+        Count of measurements: 5
+        Minimum snowfall: 2.50 inches
+        Maximum snowfall: 6.50 inches
+        Average snowfall: 4.50 inches
+        Standard deviation: 1.58 inches
+    
+2026-01-10 06:54:06 | INFO | P01 | END main()
+2026-01-10 14:39:19 | INFO | P01 | =================
+2026-01-10 14:39:19 | INFO | P01 | === RUN START ===
+2026-01-10 14:39:19 | INFO | P01 | project=Foundations of Professional Python
+2026-01-10 14:39:19 | INFO | P01 | repo_dir=datafun-01-foundations
+2026-01-10 14:39:19 | INFO | P01 | python=3.14.0
+2026-01-10 14:39:19 | INFO | P01 | os=Windows 11
+2026-01-10 14:39:19 | INFO | P01 | shell=powershell
+2026-01-10 14:39:19 | INFO | P01 | cwd=.
+2026-01-10 14:39:19 | INFO | P01 | github_actions=False
+2026-01-10 14:39:19 | INFO | P01 | =================
+2026-01-10 14:39:19 | INFO | P01 | START main()..................
+2026-01-10 14:39:19 | INFO | P01 | Generated formatted multi-line SUMMARY string.
+2026-01-10 14:39:19 | INFO | P01 | Returning the str to the calling function.
+2026-01-10 14:39:19 | INFO | P01 | 
+    Course Information:
+        Course name: Data Analytics Fundamentals
+        Course number: 608
+        Course hrs/wk: 20.00
+        Assumes prior experience: False
+        Uses Professional Python: True
+        Helpful traits: ['patience', 'curiosity', 'humor', 'tenacity']
+    
+2026-01-10 14:39:19 | INFO | P01 | Generated formatted multi-line SUMMARY string.
+2026-01-10 14:39:19 | INFO | P01 | Returning the str to the calling function.
+2026-01-10 14:39:19 | INFO | P01 | 
+    Descriptive Statistics for Snowfall (inches):
+        Total snowfall: 22.50 inches
+        Count of measurements: 5
+        Minimum snowfall: 2.50 inches
+        Maximum snowfall: 6.50 inches
+        Average snowfall: 4.50 inches
+        Standard deviation: 1.58 inches
+    
+2026-01-10 14:39:19 | INFO | P01 | END main()..................
+2026-01-10 14:39:26 | INFO | P01 | =================
+2026-01-10 14:39:26 | INFO | P01 | === RUN START ===
+2026-01-10 14:39:26 | INFO | P01 | project=Foundations of Professional Python
+2026-01-10 14:39:26 | INFO | P01 | repo_dir=datafun-01-foundations
+2026-01-10 14:39:26 | INFO | P01 | python=3.14.0
+2026-01-10 14:39:26 | INFO | P01 | os=Windows 11
+2026-01-10 14:39:26 | INFO | P01 | shell=powershell
+2026-01-10 14:39:26 | INFO | P01 | cwd=.
+2026-01-10 14:39:26 | INFO | P01 | github_actions=False
+2026-01-10 14:39:26 | INFO | P01 | =================
+2026-01-10 14:39:26 | INFO | P01 | START main()..................
+2026-01-10 14:39:26 | INFO | P01 | Generated formatted multi-line SUMMARY string.
+2026-01-10 14:39:26 | INFO | P01 | Returning the str to the calling function.
+2026-01-10 14:39:26 | INFO | P01 | 
+    Custom Information:
+        Company name: DataFun Analytics
+        Employee count: 150
+        TODO: Add your other global variables below:
+
+
+
+
+
+    
+2026-01-10 14:39:26 | INFO | P01 | Generated formatted multi-line SUMMARY string.
+2026-01-10 14:39:26 | INFO | P01 | Returning the str to the calling function.
+2026-01-10 14:39:26 | INFO | P01 | 
+    Descriptive Statistics for Snowfall (inches):
+        Total snowfall: 22.50 inches
+        TODO: Add your count of measurements below:
+
+        TODO: Add your minimum and maximum snowfall below:
+
+        Average snowfall: 4.50 inches
+        TODO: Add your standard deviation below:
+
+    
+2026-01-10 14:39:26 | INFO | P01 | END main()..................
+2026-01-10 17:03:43 | INFO | P01 | =================
+2026-01-10 17:03:43 | INFO | P01 | === RUN START ===
+2026-01-10 17:03:43 | INFO | P01 | project=Foundations of Professional Python
+2026-01-10 17:03:43 | INFO | P01 | repo_dir=datafun-01-foundations
+2026-01-10 17:03:43 | INFO | P01 | python=3.14.0
+2026-01-10 17:03:43 | INFO | P01 | os=Windows 11
+2026-01-10 17:03:43 | INFO | P01 | shell=powershell
+2026-01-10 17:03:43 | INFO | P01 | cwd=.
+2026-01-10 17:03:43 | INFO | P01 | github_actions=False
+2026-01-10 17:03:43 | INFO | P01 | =================
+2026-01-10 17:03:43 | INFO | P01 | START main()..................
+2026-01-10 17:03:43 | INFO | P01 | Generated formatted multi-line SUMMARY string.
+2026-01-10 17:03:43 | INFO | P01 | Returning the str to the calling function.
+2026-01-10 17:03:43 | INFO | P01 | 
+    Course Information:
+        Course name: Data Analytics Fundamentals
+        Course number: 608
+        Course hrs/wk: 20.00
+        Assumes prior experience: False
+        Uses Professional Python: True
+        Helpful traits: ['patience', 'curiosity', 'humor', 'tenacity']
+    
+2026-01-10 17:03:43 | INFO | P01 | Generated formatted multi-line SUMMARY string.
+2026-01-10 17:03:43 | INFO | P01 | Returning the str to the calling function.
+2026-01-10 17:03:43 | INFO | P01 | 
+    Descriptive Statistics for Snowfall (inches):
+        Total snowfall: 22.50 inches
+        Count of measurements: 5
+        Minimum snowfall: 2.50 inches
+        Maximum snowfall: 6.50 inches
+        Average snowfall: 4.50 inches
+        Standard deviation: 1.58 inches
+    
+2026-01-10 17:03:43 | INFO | P01 | END main()..................

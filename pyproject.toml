@@ -9,7 +9,7 @@
 name = "datafun-01-foundations" # CUSTOM: Package distribution name (use lowercase and dashes).
 version="0.1.0"  # WHY: start with initial version.
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 
 dependencies = [
     # REQ.DEPS: External packages used by the project code.
@@ -50,7 +50,7 @@ docs = [
 include = ["src"]
 extraPaths = ["src"]
 exclude = [ "**/node_modules", "**/.*", ".venv","**/__pycache__","dist","build"]
-pythonVersion = "3.12"
+pythonVersion = "3.14"
 reportMissingImports = "warning"
 reportPrivateUsage = "none"
 typeCheckingMode = "strict" # strict | basic | off
