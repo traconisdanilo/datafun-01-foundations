@@ -23,6 +23,7 @@ In this project, you will:
 - **initialize** each variable to a value.
 - use Python **f-strings** (formatted strings) to display information.
 
+Important: <mark>Git add-commit-push **project.log**</mark> (along with other project files).
 ---
 
 ## Three Workflows
