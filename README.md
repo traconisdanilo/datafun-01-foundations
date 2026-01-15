@@ -43,10 +43,10 @@ Follow the detailed instructions at:
 
 ## 02: Set Up Project (Once Per Project)
 
-Follow the detailed instructions at:
+Start with the list below. If you would like more detailed instructions on any step, see the pro guide at:
 [**02. Set Up Your Project**](https://denisecase.github.io/pro-analytics-02/02-set-up-project/)
 
-Detailed instructions are provided to:
+Start here:
 
 1. Sign in to GitHub, open this repository in your browser, and click **Copy this template** to get a copy in **YOURACCOUNT**.
 2. Enable GitHub Pages.
