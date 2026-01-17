@@ -1,6 +1,6 @@
-"""app_yourname.py - Project script.
+"""app_danilotraconis.py - Project script.
 
-Author: Your Name or Alias
+Author: Danilo Traconis
 Date: 2026-01
 
   Practice key Python skills related to:
@@ -18,14 +18,14 @@ OBS:
   This is your file to practice and customize.
   Find the TODO comments, and as you complete each task, remove the TODO note.
 
-TODO: Change the Author line of the docstring above to your name or alias.
+: Change the Author line of the docstring above to your name or alias.
 
-TODO: RENAME this file from app_yourname.py to something
+: RENAME this file from app_yourname.py to something
       that includes your name or alias, e.g., app_stellar_analytics.py.
 
-TODO: Update the opening line of the docstring above to match the new file name.
+: Update the opening line of the docstring above to match the new file name.
 
-TODO: Update the associated `uv run python` command in the README.md file.
+: Update the associated `uv run python` command in the README.md file.
 
 """
 
@@ -56,19 +56,24 @@ MY_ANALYTICS_COMPANY: Final[str] = "DataFun Analytics"
 MY_EMPLOYEE_COUNT: Final[int] = 150
 
 # See the other file for examples.
-# TODO: Declare and initialize a string (str) variable of your choice below:
+# : Declare and initialize a string (str) variable of your choice below:
+MY_CITY: Final[str] = "Willmar"
 
 
-# TODO: Declare and initialize an integer (int) variable of your choice below:
+# : Declare and initialize an integer (int) variable of your choice below:
+MY_YEAR_STARTING_GRAD_SCHOOL: Final[int] = 2026
 
 
-# TODO: Declare and initialize a float (float) variable of your choice below:
+# : Declare and initialize a float (float) variable of your choice below:
+MY_OVERWHELMED_LEVEL: Final[float] = 6.8
 
 
-# TODO: Declare and initialize a boolean (bool) variable of your choice (True or False) below:
+# : Declare and initialize a boolean (bool) variable of your choice (True or False) below:
+MY_LOVES_TO_LEARN: Final[bool] = True
 
 
-# TODO: Declare and initialize a list of strings (list[str]) variable of your choice below:
+# : Declare and initialize a list of strings (list[str]) variable of your choice below:
+MY_FAVORITE_FOODS: Final[list[str]] = ["Burgers", "Pizza", "Tacos"]
 # REQ: Strings must be in quotes and items are separated by commas,
 # REQ: The list is wrapped in square brackets. (See the other file for examples.)
 
@@ -83,7 +88,7 @@ def get_summary() -> str:
 
     Returns: - a formatted multi-line string (starts with f and wrapped in triple quotes).
     """
-    # TODO: Create and return a multi-line f-string (triple-quoted) that includes
+    # : Create and return a multi-line f-string (triple-quoted) that includes
     # all of the global variables you declared above, each on its own line,
     # labeled clearly with descriptive text.
     # See the other file for an example. Remember to start the string with an f!
@@ -91,9 +96,11 @@ def get_summary() -> str:
     Custom Information:
         Company name: {MY_ANALYTICS_COMPANY}
         Employee count: {MY_EMPLOYEE_COUNT}
-        TODO: Add your other global variables below:
-
-
+        City: {MY_CITY}
+        Year starting grad school: {MY_YEAR_STARTING_GRAD_SCHOOL}
+        Overwhelmed level: {MY_OVERWHELMED_LEVEL}
+        Loves to learn: {MY_LOVES_TO_LEARN}
+        Favorite foods: {MY_FAVORITE_FOODS}
 
 
 
@@ -117,8 +124,8 @@ def get_statistics() -> str:
     # Initialize sample data - snowfall measurements in inches.
     # REQ: Vary ONE of the sample data values.
     # See how the statistics change when you do.
-    # TODO: Change one of the values in the list below.
-    snowfall_inches: list[float] = [2.5, 3.5, 4.5, 5.5, 6.5]
+    # : Change one of the values in the list below.
+    snowfall_inches: list[float] = [2.5, 3.5, 4.0, 5.5, 6.5]
 
     # Calculate descriptive statistics below - see other file for examples.
 
@@ -128,24 +135,27 @@ def get_statistics() -> str:
     # Example : Calculate count of measurements.
     count: int = len(snowfall_inches)
 
-    # TODO: Calculate minimum and maximum snowfall (see other file for examples).
-
+    # : Calculate minimum and maximum snowfall (see other file for examples).
+    minimum: float = min(snowfall_inches) if count > 0 else 0.0
+    maximum: float = max(snowfall_inches) if count > 0 else 0.0
     # Use the statistics module to calculate average.
     average: float = statistics.mean(snowfall_inches) if count > 0 else 0.0
 
-    # TODO: Use the statistics module to calculate standard deviation below:
-
+    # : Use the statistics module to calculate standard deviation below:
+    stdev: float = statistics.stdev(snowfall_inches) if count > 1 else 0.0
     # Build a formatted multi-line string using f and triple quotes.
     summary: str = f"""
     Descriptive Statistics for Snowfall (inches):
         Total snowfall: {total:.2f} inches
-        TODO: Add your count of measurements below:
+        : Add your count of measurements below:
+        Count of measurements: {count}
 
-        TODO: Add your minimum and maximum snowfall below:
-
+        : Add your minimum and maximum snowfall below:
+        Min snowfall: {minimum:.2f} inches
+        Max snowfall: {maximum:.2f} inches
         Average snowfall: {average:.2f} inches
-        TODO: Add your standard deviation below:
-
+        : Add your standard deviation below:
+        Standard deviation: {stdev:.2f}
     """
 
     LOG.info("Generated formatted multi-line SUMMARY string.")
